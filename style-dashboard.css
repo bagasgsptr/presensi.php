@@ -1,0 +1,156 @@
+/* style-dashboard.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Wrapper */
+.wrapper {
+    display: flex;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #2d3e50;
+    color: #fff;
+    padding: 20px;
+    height: 100vh; /* Tinggi penuh layar */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed; /* Membuat sidebar tetap */
+    left: 0; /* Posisi di sisi kiri layar */
+    top: 0; /* Mulai dari atas layar */
+    overflow-y: auto; /* Jika konten sidebar melebihi tinggi, tambahkan scrollbar */
+    z-index: 1000; /* Pastikan di atas elemen lain */
+}
+
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #495f73;
+    transform: translateX(5px); /* Efek lembut geser kanan */
+}
+
+/* Main Content Styling */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px; /* Memberi jarak agar tidak tertutup oleh sidebar */
+}
+header h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+footer p {
+    margin-top: 20px;
+}
+
+/* Logout Button */
+.logout {
+    text-decoration: none;
+    color: #fff;
+    background-color: #d9534f;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.logout:hover {
+    background-color: #c9302c;
+}
+
+/* Sidebar Button Active State */
+.sidebar nav ul li a.active {
+    background-color: #495f73;
+    transform: scale(1.1); /* Efek tombol lebih besar */
+}
